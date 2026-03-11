@@ -1,0 +1,12 @@
+输入: {"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"Cline","version":"3.71.0"}},"jsonrpc":"2.0","id":0}
+输出: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-11-25","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"weather","version":"1.26.0"}}}
+输入: {"method":"notifications/initialized","jsonrpc":"2.0"}
+输入: {"method":"tools/list","jsonrpc":"2.0","id":1}
+输出: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"get_alerts","description":"Get weather alerts for a US state.\n\nArgs:\n    state: Two-letter US state code (e.g., CA, NY)\n","inputSchema":{"properties":{"state":{"title":"State","type":"string"}},"required":["state"],"title":"get_alertsArguments","type":"object"},"outputSchema":{"properties":{"result":{"title":"Result","type":"string"}},"required":["result"],"title":"get_alertsOutput","type":"object"}},{"name":"get_forecast","description":"\nGet a weather forecast for a specific latitude and longitude.\n\nArgs:\n    latitude: The latitude of the location.\n    longitude: The longitude of the location.\n\nReturns:\n    A string containing the weather forecast.\n","inputSchema":{"properties":{"latitude":{"title":"Latitude","type":"number"},"longitude":{"title":"Longitude","type":"number"}},"required":["latitude","longitude"],"title":"get_forecastArguments","type":"object"},"outputSchema":{"properties":{"result":{"title":"Result","type":"string"}},"required":["result"],"title":"get_forecastOutput","type":"object"}}]}}
+输入: {"method":"resources/list","jsonrpc":"2.0","id":2}
+输出: {"jsonrpc":"2.0","id":2,"result":{"resources":[]}}
+输入: {"method":"resources/templates/list","jsonrpc":"2.0","id":3}
+输出: {"jsonrpc":"2.0","id":3,"result":{"resourceTemplates":[]}}
+输入: {"method":"prompts/list","jsonrpc":"2.0","id":4}
+输出: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
+--- STDIN stream closed to target ---
