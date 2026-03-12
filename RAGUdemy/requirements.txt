@@ -1,11 +1,11 @@
 langchain
+langchain-core
 langchain-community
 langchain-text-splitters
 langchain-openai
 faiss-cpu
 tiktoken
 chromadb
-sentence-transformers
 pypdf
 pymupdf
 unstructured
@@ -18,3 +18,6 @@ ipywidgets
 openpyxl
 msoffcrypto-tool
 jq
+matplotlib
+langchain-huggingface
+sentence-transformers
