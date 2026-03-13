@@ -21,3 +21,6 @@ jq
 matplotlib
 langchain-huggingface
 sentence-transformers
+langchain-astradb
+langchain-pinecone
+langchain-experimental
