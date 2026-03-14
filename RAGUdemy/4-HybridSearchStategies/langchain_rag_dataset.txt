@@ -1,0 +1,20 @@
+LangChain is an open-source framework designed to simplify the development of applications using large language models (LLMs).
+LangChain provides abstractions for working with prompts, chains, memory, and agents, making it easier to build complex LLM-based systems.
+The framework supports integration with various vector databases like FAISS and Chroma for semantic retrieval.
+LangChain enables Retrieval-Augmented Generation (RAG) by allowing developers to fetch relevant context before generating responses.
+Memory in LangChain helps models retain previous interactions, making multi-turn conversations more coherent.
+Agents in LangChain can use tools like calculators, search APIs, or custom functions based on the instructions they receive.
+BM25 and vector-based retrieval can be combined in LangChain to support hybrid retrieval strategies.
+FAISS is a high-performance library for similarity search that LangChain leverages for efficient retrieval in RAG pipelines.
+Chroma is a lightweight vector store often used in LangChain for embedding-based document storage and retrieval.
+Prompt templates in LangChain support Jinja-style formatting and variable injection to customize model inputs.
+The 'stuff' chain sends all context at once to the LLM, useful for short documents in RAG.
+The 'map-reduce' chain breaks up large documents, processes them separately, and then aggregates the outputs.
+The 'refine' chain iteratively updates an answer by incorporating each new chunk of information.
+LangChain allows LLMs to act as agents that decide which tool to call and in what order during a task.
+LangChain supports conversational memory using ConversationBufferMemory and summarization memory with ConversationSummaryMemory.
+LangChain agents can interact with external APIs and databases, enhancing the capabilities of LLM-powered applications.
+RAG pipelines in LangChain involve document loading, splitting, embedding, retrieval, and LLM-based response generation.
+MMR (Maximal Marginal Relevance) retrieval in LangChain improves diversity by balancing relevance and redundancy.
+Tool usage in LangChain allows agents to execute predefined Python functions with contextual input from the user.
+LangChain supports reranking retrieved results using LLMs or neural cross-encoders to improve context quality.

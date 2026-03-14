@@ -1,0 +1,10 @@
+LangChain is a flexible framework designed for developing applications powered by large language models (LLMs). It provides tools and abstractions to work with LLMs more effectively and includes components for prompt management, chains, memory, and agents.
+LangChain integrates with many third-party services such as OpenAI, Hugging Face, and Cohere. This enables developers to experiment with different models and optimize performance for specific use cases like summarization, question answering, or translation.
+Retrieval-Augmented Generation (RAG) is a powerful technique where external knowledge is retrieved and passed into the prompt to ground LLM responses. LangChain makes it easy to implement RAG using vector databases like FAISS, Chroma, and Pinecone.
+BM25 is a traditional sparse retrieval method that scores documents based on keyword matching. Although fast, it often struggles with synonyms and semantic similarity.
+Dense retrieval uses embeddings to match query and documents in a vector space. This allows capturing semantic meaning, making it useful for fuzzy or natural language queries.
+LangChain supports hybrid retrieval by combining BM25 and dense similarity scores. This approach improves both precision and recall in document search.
+FAISS is a popular library used for fast approximate nearest neighbor search in high-dimensional spaces. It supports both flat and compressed indexes, which makes it scalable for large document stores.
+Agents in LangChain are chains that use LLMs to decide which tools to use and in what order. This makes them suitable for multi-step tasks like question answering with search and code execution.
+LangChain supports tool integration including web search, calculators, and APIs, allowing LLMs to interact with external systems and respond more accurately to dynamic queries.
+Memory in LangChain enables context retention across multiple steps in a conversation or task, making the application more coherent and stateful.

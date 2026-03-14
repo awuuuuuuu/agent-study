@@ -24,3 +24,4 @@ sentence-transformers
 langchain-astradb
 langchain-pinecone
 langchain-experimental
+rank_bm25
