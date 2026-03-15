@@ -25,3 +25,4 @@ langchain-astradb
 langchain-pinecone
 langchain-experimental
 rank_bm25
+wikipedia
