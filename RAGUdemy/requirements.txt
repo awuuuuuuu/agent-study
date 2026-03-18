@@ -25,5 +25,8 @@ langchain-astradb
 langchain-pinecone
 langchain-experimental
 rank_bm25
-wikipedia
 langchain-google-genai
+langchain-tavily
+arxiv
+wikipedia
+langgraph
