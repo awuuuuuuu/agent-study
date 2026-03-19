@@ -30,3 +30,4 @@ langchain-tavily
 arxiv
 wikipedia
 langgraph
+langgraph-cli[inmem]
