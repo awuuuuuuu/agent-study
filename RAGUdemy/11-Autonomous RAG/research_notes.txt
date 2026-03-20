@@ -1,0 +1,77 @@
+Experiment Log: Transformer Evaluation - July 2024
+
+EfficientFormer:
+- Top-1 accuracy: 92.4% on TinyImageNet
+- Peak memory usage: 290MB (batch size = 16)
+- Deployment target: Raspberry Pi 4
+- Notes: Works well in quantized int8 mode with no major accuracy drop
+
+Longformer:
+- Evaluation on customer support logs (max tokens: 8192)
+- Latency >1.2s per query in streaming setting
+- Observations: Chunk-based hybrid attention may reduce delay
+
+Reformer:
+- Challenges during training:
+   - Bucket collisions
+   - Inconsistent loss spikes beyond 5k steps
+   - Sparse gradient updates during LSH attention
+- Solutions tried:
+   - Gradient clipping
+   - Warmup scheduler
+   - Memory-efficient attention modules
+
+LLaMA2:
+- Instruction-tuned with 20k internal support tickets
+- Combined with RAG for chatbot Q&A
+- Latency: ~300ms on A100
+- Evaluation metric: Win rate vs human (75%)
+- GPT-4 judge feedback: “Contextual reasoning good, factuality needs work”
+- Prompts evaluated: Alpaca format, ChatML, and custom XML-based memory tags
+
+TinyBERT:
+- Used for classification: Support ticket priority tagging
+- Evaluation: 87% F1 score, confusion in ambiguous class C
+- Works well with 2-layer FFN adapter for domain transfer
+
+Additional Experiments:
+
+1. FlashAttention2:
+   - Integrated into LLaMA2
+   - Reduces context latency by ~50%
+
+2. Chain-of-Thought prompting:
+   - Outperforms direct answer prompting by 8% on logic tasks
+   - Reflective prompting increases accuracy by 3%
+
+3. Tool-augmented prompting:
+   - Integrated LangGraph + Wikipedia + SQL search
+   - Enables dynamic retrieval-agent reasoning
+   - Example: "Give me customer insights from SQL, verify with wiki"
+
+4. Human evaluation protocol:
+   - Internal annotators score fluency, helpfulness, correctness
+   - GPT-4 also used as synthetic evaluator
+
+5. Retrieval experiments:
+   - Hybrid dense + sparse retriever
+   - Tested Weaviate vs FAISS + BM25 reranking
+   - FAISS more efficient but slightly lower recall
+   - Weaviate integration with GraphQL helpful for filtering
+
+6. LoRA tuning:
+   - Used for adapter-based fine-tuning
+   - Rank = 8, dropout = 0.05
+   - Reduces GPU memory footprint by 60%
+   - Compatible with PEFT library
+
+7. Safety:
+   - Toxicity detection via Detoxify
+   - Out-of-scope filter via zero-shot classifier
+   - Red teaming involved adversarial prompt testing
+
+Conclusion:
+
+- LLaMA2 continues to be promising for controlled chat
+- Sparse attention models are being prioritized for research
+- Dynamic RAG pipelines via LangGraph outperform static RAG
