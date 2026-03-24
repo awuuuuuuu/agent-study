@@ -1,24 +1,11 @@
 [project]
-name = "learnrag"
+name = "learningrag"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13, <3.14"
 dependencies = [
-    "faiss-cpu>=1.13.2",
-    "langchain>=1.2.13",
-    "langchain-community>=0.4.1",
-    "langchain-gemini>=0.1.1",
-    "langchain-google-genai>=4.2.1",
-    "langchain-openai>=1.1.11",
-    "llama-index>=0.14.18",
-    "llama-index-embeddings-dashscope>=0.5.0",
-    "llama-index-llms-openai-like>=0.7.1",
-    "llama-index-readers-file>=0.6.0",
-    "matplotlib>=3.10.8",
-    "rank-bm25>=0.2.2",
-    "scikit-learn>=1.8.0",
-    "sentence-transformers>=5.3.0",
-    "spacy>=3.8.11",
-    "transformers>=5.3.0",
+    "paddleocr>=3.4.0",
+    "paddlepaddle==3.3.0",
+    "pip>=26.0.1",
 ]

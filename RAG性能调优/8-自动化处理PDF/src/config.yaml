@@ -1,0 +1,6 @@
+ocr:
+  use_doc_orientation_classify: false
+  use_doc_unwarping: false
+  use_textline_orientation: false
+  language: "ch"
+  high_precision: true
