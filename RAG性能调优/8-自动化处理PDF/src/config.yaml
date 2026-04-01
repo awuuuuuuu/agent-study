@@ -4,3 +4,26 @@ ocr:
   use_textline_orientation: false
   language: "ch"
   high_precision: true
+
+dify:
+  api_key: ""
+  dataset_id: "5a090d5e-1a29-4d76-bf2f-7a07538cffab"  # 你的数据集ID
+  indexing_technique: "high_quality"
+  process_rules:
+    pre_processing:
+      - id: "remove_extra_spaces"
+        enabled: true
+      - id: "remove_urls_emails"
+        enabled: true
+    segmentation:
+      separator: "###"
+      max_tokens: 500
+    
+meta:
+  fields:
+    - name: "author"
+      value: "awu"
+      id: "373e3455-e7cc-4569-a184-e7e67ddb06f6"  # 添加创建成功的ID
+    - name: "doc_source"
+      value_from: "filename"
+      id: "1cc9fdfd-9eab-4fe6-8c6b-8676bdafbdb4"  # 添加创建成功的ID
