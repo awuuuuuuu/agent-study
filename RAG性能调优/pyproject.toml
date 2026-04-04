@@ -6,13 +6,16 @@ readme = "README.md"
 requires-python = ">=3.13, <3.14"
 dependencies = [
     "addict>=2.4.0",
+    "asyncio>=4.0.0",
     "dashscope>=1.25.15",
     "datasets>=4.8.4",
     "faiss-cpu>=1.13.2",
+    "fastapi>=0.135.3",
     "hnswlib>=0.8.0",
     "langchain>=1.2.13",
     "langchain-community>=0.4.1",
     "llama-index>=0.14.19",
+    "llama-index-agent-openai",
     "llama-index-embeddings-openai>=0.6.0",
     "llama-index-llms-openai>=0.7.4",
     "llama-index-retrievers-bm25>=0.7.1",
@@ -32,4 +35,5 @@ dependencies = [
     "torch>=2.10.0",
     "transformers>=5.4.0",
     "unstructured[md]>=0.22.6",
+    "uvicorn>=0.43.0",
 ]
