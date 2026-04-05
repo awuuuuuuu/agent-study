@@ -1,0 +1,6 @@
+llama-index
+llama-index-llms-openai-like
+llama-index-embeddings-dashscope
+llama-index-tools-tavily-research
+nest-asyncio
+python-dotenv

@@ -1,0 +1,8 @@
+openai
+streamlit
+pillow
+llama-index
+llama-index-core
+llama-index-llms-openai-like
+llama-index-llms-dashscope
+llama-index-embeddings-dashscope
